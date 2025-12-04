@@ -1,3 +1,9 @@
+fastapi
+uvicorn[standard]
+aiofiles
+langchain
+openai
+langchain-openai
 langchain
 openai
 langchain-openai

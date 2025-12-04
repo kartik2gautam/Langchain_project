@@ -6,6 +6,10 @@ services:
       - .env
     environment:
       - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"
     volumes:
-      - ./:/app
-    command: python app/main.py
+      - ./app:/app
+    working_dir: /app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped

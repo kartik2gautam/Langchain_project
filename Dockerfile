@@ -6,9 +6,10 @@ WORKDIR /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY app ./app
+# Copy application code (put files from repo `app/` into container /app)
+COPY app/ .
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["python", "app/main.py"]
+# Run uvicorn against the simple `main:app` module (single main file)
+CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
