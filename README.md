@@ -1,6 +1,6 @@
-# LangChain minimal Docker example
+# LangChain Project
 
-This repository contains a minimal example to run a LangChain-based app that calls OpenAI, using Docker Compose.
+This repository contains a example to run a LangChain-based app that calls OpenAI, using Docker Compose.
 
 Quick start
 
